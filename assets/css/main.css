@@ -3993,7 +3993,7 @@ input, select, textarea {
 
 /* Landing */
 
-	body.landing #page-wrapper {
+	/* body.landing #page-wrapper {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
@@ -4003,7 +4003,53 @@ input, select, textarea {
 		background-repeat: no-repeat;
 		background-size: cover;
 		padding-top: 0;
-	}
+	} */
+
+	body.landing #page-wrapper {
+    position: relative; /* Make the wrapper relative to contain absolute-positioned elements */
+    background: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)) url("../../images/banner.jpg") center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 0;
+}
+
+body.landing #page-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../../videos/banner-video.mp4") no-repeat center center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+body.landing #page-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    body.landing #page-wrapper::before {
+        animation: playVideo 10s infinite linear;
+    }
+
+    @keyframes playVideo {
+        from {
+            transform: scale(1.01);
+        }
+        to {
+            transform: scale(1);
+        }
+    }
+}
 
 	body.landing #footer {
 		background-color: rgba(29, 36, 42, 0.9);
@@ -4047,6 +4093,7 @@ input, select, textarea {
 body.is-mobile.landing #banner,
 body.is-mobile.landing .wrapper.style4 {
     background: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
