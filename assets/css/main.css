@@ -4337,7 +4337,7 @@ body.is-mobile.landing #page-wrapper {
 	display: none;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 	#video-bg {
 		display: none;
 		/* Hide the video element */
