@@ -9,49 +9,74 @@
 
 
 #about-us {
-	background-color: #EADED0;
+	/* Styles specific to the about us section */
 }
 
 #about-us .inner {
-
+	/* Styles specific to the inner div of the about us section */
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .left-column {
+	/* Styles specific to the left column */
 	flex: 1 0 50%;
+	/* Take up 50% of the width */
 	padding-right: 20px;
+	/* Add some spacing between columns */
 }
 
 .right-column {
+	/* Styles specific to the right column */
 	flex: 1 0 50%;
-
+	/* Take up 50% of the width */
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	/* Center content horizontally */
 }
 
 h2 {
+	/* Styles specific to the heading within the about us section */
 	font-size: 24px;
 	margin-bottom: 10px;
 }
 
 p {
-
+	/* Styles specific to the paragraph within the about us section */
 	margin-bottom: 20px;
 }
 
 .image-about {
-	flex: 1 0 calc(50% - 10px);
-	margin-bottom: 20px;
-	border-radius: 30px;
-	display: flex;
-	align-items: flex-end;
+	/* Styles specific to the image div within the about us section */
+	width: 100%;
+	max-width: 500px;
+	/* Adjust the maximum width of the image container */
 }
 
 .image-about img {
+	/* Styles specific to the images within the about us section */
 	width: 100%;
 	height: auto;
 	display: block;
+	border-radius: 10px;
+	/* Rounded corners for images */
+}
+
+@media (max-width: 768px) {
+
+	/* Media query for small screens */
+	.right-column {
+		flex: 1 0 100%;
+		/* Full width for small screens */
+	}
+
+	.left-column {
+		padding-right: 0;
+		/* Remove padding between columns on small screens */
+	}
+
+
 }
 
 
