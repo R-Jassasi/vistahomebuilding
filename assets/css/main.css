@@ -4230,7 +4230,6 @@ body.landing #page-wrapper::before {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	background: url("../../videos/banner-video.mp4") no-repeat center center;
 	background-size: cover;
 	opacity: 0.5;
 }
@@ -4275,11 +4274,15 @@ body.is-mobile.landing #page-wrapper {
 
 #video-bg {
 	position: absolute;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	min-height: 100%;
-	z-index: -1;
+    top: 50%; /* Center the video vertically */
+    left: 50%; /* Center the video horizontally */
+    transform: translate(-50%, -50%); /* Move the video back by half of its own width and height */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto; /* Allow the video to resize horizontally */
+    height: auto; /* Allow the video to resize vertically */
+    z-index: -1;
+    object-fit: cover; /* Ensure the video covers the entire container */
 }
 
 .inner {
@@ -4318,7 +4321,6 @@ body.is-mobile.landing #banner::before {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-	background: url("../../images/banner-video.jpg") no-repeat center center;
 	background-size: cover;
 	opacity: 0.5;
 }
@@ -4332,7 +4334,6 @@ body.is-mobile.landing #banner::before {
 		width: 100%;
 		height: 100%;
 		z-index: -1;
-		background: url("../../videos/banner-video.mp4") no-repeat center center;
 		background-size: cover;
 		opacity: 0.5;
 		animation: playVideo 10s infinite linear;
