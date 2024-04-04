@@ -4285,7 +4285,7 @@ body.landing #page-wrapper::after {
 }
 
 body.landing #footer {
-	background-color: #222221;
+	background-color: #4B8680;
 }
 
 body.is-mobile.landing #page-wrapper {
@@ -4378,5 +4378,5 @@ body.is-mobile.landing #banner::before {
 
 
 body.is-mobile.landing #footer {
-	background-color: #222221;
+	background-color: #4B8680;
 }
