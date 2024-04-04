@@ -24,18 +24,18 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 
-			<h1><a href="#banner"><img src="./images/Logo-gold.png" class=smalllogo></a></h1>
+			<h1><a href="#banner" class="scrolly"><img src="./images/Logo-gold.png" class="smalllogo"></a></h1>
 			<nav id="nav">
 				<ul>
 					<li class="special">
 						<a href="#menu" class="menuToggle"><span>Menu</span></a>
 						<div id="menu">
 							<ul>
-								<li><a href="#about-us">About</a></li>
-								<li><a href="#services">Services</a></li>
-								<li><a href="#why-us">Why Us</a></li>
-								<li><a href="#gallery">Projects</a></li>
-								<li><a href="#contact">Contact us</a></li>
+								<li><a href="#about-us" class="scrolly">About</a></li>
+								<li><a href="#services" class="scrolly">Services</a></li>
+								<li><a href="#why-us" class="scrolly">Why Us</a></li>
+								<li><a href="#gallery" class="scrolly">Projects</a></li>
+								<li><a href="#contact" class="scrolly">Contact us</a></li>
 							</ul>
 						</div>
 					</li>
@@ -58,11 +58,12 @@
 					Quality<br />
 					and Pride </p>
 				<ul class="actions special">
-					<li><a href="#" class="button primary">Contact us</a></li>
+					<li><a href="#contact" class="button primary">Contact us</a></li>
 				</ul>
 			</div>
-			<a href="#one" class="more scrolly" style="color: white;">Discover More</a>
+			<a href="#about-us" class="more scrolly" style="color: white;">Discover More</a>
 		</section>
+
 		<!--About Us-->
 		<section id="about-us" class="wrapper">
 			<div class="inner">
@@ -184,6 +185,7 @@
 				</div>
 			</section>
 		</section>
+
 		<!-- Gallery -->
 		<section id="gallery" class="wrapper">
 			<div class="inner">
@@ -227,100 +229,103 @@
 
 
 		<!--contact us-->
-		<section id="contact" class="wrapper style5">
-			<section class="wrapper style5" id="contact">
-				<div class="inner">
-					<section>
-						<h2>Get in Touch</h2>
-						<form id="myForm" action="https://api.web3forms.com/submit" method="POST">
+		<section class="wrapper style5" id="contact">
+			<div class="inner">
+				<section>
+					<h2>Get in Touch</h2>
+					<form id="myForm" action="https://api.web3forms.com/submit" method="POST">
 
-							<!-- Replace with your Access Key -->
-							<input type="hidden" name="access_key" value="5f91212a-83cf-40eb-b751-a4df4c028996">
+						<!-- Replace with your Access Key -->
+						<input type="hidden" name="access_key" value="5f91212a-83cf-40eb-b751-a4df4c028996">
 
-							<div class="row gtr-uniform">
+						<div class="row gtr-uniform">
 
-								<!-- Name -->
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="name" id="demo-name" value="" placeholder="Name"
-										required />
-								</div>
-
-								<!-- Email -->
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="email" id="demo-email" value="" placeholder="Email"
-										required />
-								</div>
-
-								<!-- Category -->
-								<div class="col-12">
-									<select name="category" id="demo-category" required>
-										<option value="None selected">- Services -</option>
-										<option value="Custom Home Interior">Custom Home Interior</option>
-										<option value="Legal basements">Legal basements</option>
-										<option value="Kitchenettes">Kitchenettes</option>
-										<option value="Bathrooms">Bathrooms</option>
-										<option value="Flooring">Flooring</option>
-										<option value="Stairs">Stairs</option>
-										<option value="Tiles">Tiles</option>
-										<option value="Other">Other</option>
-									</select>
-								</div>
-								<!-- Message -->
-								<div class="col-12">
-									<textarea name="message" id="demo-message" placeholder="Enter your message" rows="6"
-										required></textarea>
-								</div>
-
-								<div class="col-12">
-									<!-- hCaptcha Spam Protection -->
-									<div class="h-captcha" data-captcha="true" required></div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-								<!-- Required for hCaptcha -->
-								<script src="https://web3forms.com/client/script.js" async defer></script>
+							<!-- Name -->
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="name" id="demo-name" value="" placeholder="Name" required />
 							</div>
-						</form>
-						<script>
-							document.getElementById("myForm").addEventListener("submit", function (event) {
-								var captchaResponse = document.querySelector('[name="h-captcha-response"]').value;
-								if (!captchaResponse) {
-									event.preventDefault(); // Prevent form submission
-									alert("Please complete the captcha.");
-								}
-							});
-						</script>
-					</section>
 
-				</div>
-			</section>
+							<!-- Email -->
+							<div class="col-6 col-12-xsmall">
+								<input type="email" name="email" id="demo-email" value="" placeholder="Email"
+									required />
+							</div>
+
+							<!-- Category -->
+							<div class="col-12">
+								<select name="category" id="demo-category" required>
+									<option value="None selected">- Services -</option>
+									<option value="Custom Home Interior">Custom Home Interior</option>
+									<option value="Legal basements">Legal basements</option>
+									<option value="Kitchenettes">Kitchenettes</option>
+									<option value="Bathrooms">Bathrooms</option>
+									<option value="Flooring">Flooring</option>
+									<option value="Stairs">Stairs</option>
+									<option value="Tiles">Tiles</option>
+									<option value="Other">Other</option>
+								</select>
+							</div>
+							<!-- Message -->
+							<div class="col-12">
+								<textarea name="message" id="demo-message" placeholder="Enter your message" rows="6"
+									required></textarea>
+							</div>
+
+							<div class="col-12">
+								<!-- hCaptcha Spam Protection -->
+								<div class="h-captcha" data-captcha="true" required></div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+							</div>
+							<!-- Required for hCaptcha -->
+							<script src="https://web3forms.com/client/script.js" async defer></script>
+						</div>
+					</form>
+					<script>
+						document.getElementById("myForm").addEventListener("submit", function (event) {
+							var captchaResponse = document.querySelector('[name="h-captcha-response"]').value;
+							if (!captchaResponse) {
+								event.preventDefault(); // Prevent form submission
+								alert("Please complete the captcha.");
+							}
+						});
+					</script>
+				</section>
+
+			</div>
+		</section>
 
 
 
 	</div>
 	<!-- Footer -->
 	<footer id="footer">
+		<ul class="icons">
+			<li><a href="tel:+14379929396" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
+			<li><a href="https://www.facebook.com/profile.php?id=100080721155648&mibextid=eQY6cl" target="_blank"
+					class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+			</li>
+			<li><a href="https://www.instagram.com/vista_home_building?igsh=NTc4MTIwNjQ2YQ%3D%3D&fbclid=IwAR3UGvcMCUfawPxo_ms9tlBjXKVrCfMVdUuBHCaZOZwqC-fXvkNTfkfsbZA_aem_AUtg0WNgwTdx4E9087lDjLFhEknVV1KoCNa89uUBmhNoRx6PMPHRjBaYan0v41yOz0vEZ-m_SvKpMzs5USrU5esV"
+					class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a>
+			</li>
+			<li><a href="https://wa.me/+14379929396" target="_blank" class="icon brands fa-whatsapp"><span
+						class="label">Whatsapp</span></a></li>
+			<li><a href="mailto:Info@vistahomebuilding.com" class="icon solid fa-envelope"><span
+						class="label">Email</span></a></li>
+		</ul>
 
-		<section class="wrapper style">
-			<div class="inner">
+		<p style="color: white;">We serve all around GTA Ontario</p>
 
+		<p style="color: white;"><a href="tel:+14379929396">+14379929396</a> &nbsp;|&nbsp; <a
+				href="mailto:Info@vistahomebuilding.com">Info@vistahomebuilding.com</a></p>
 
-				<ul class="icons">
-					<li><a href="tel:+14379929396" class="icon solid fa-phone"><span class="label">Phone</span></a></li>
-					<li><a href="https://www.facebook.com/profile.php?id=100080721155648&mibextid=eQY6cl" target="_blank"
-							class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="https://www.instagram.com/vista_home_building?igsh=NTc4MTIwNjQ2YQ%3D%3D&fbclid=IwAR3UGvcMCUfawPxo_ms9tlBjXKVrCfMVdUuBHCaZOZwqC-fXvkNTfkfsbZA_aem_AUtg0WNgwTdx4E9087lDjLFhEknVV1KoCNa89uUBmhNoRx6PMPHRjBaYan0v41yOz0vEZ-m_SvKpMzs5USrU5esV"
-							class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-					<li><a href="https://wa.me/+14379929396" target="_blank" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
-					<li><a href="mailto:Info@vistahomebuilding.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Vista Home Building 2024</li>
-					<li style="color: #ffffff2a;">Template: <a href="http://html5up.net" target="_blank">HTML5
-							UP</a></li>
-				</ul>
+		<ul class="copyright">
+			<li>&copy; Vista Home Building 2024</li>
+			<li style="color: #ffffff2a;">Template: <a href="http://html5up.net" target="_blank">HTML5
+					UP</a></li>
+		</ul>
 	</footer>
 
 	<!-- Scripts -->
