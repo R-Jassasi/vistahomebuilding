@@ -40,16 +40,15 @@ p {
 	margin-bottom: 20px;
 }
 
-.image {
+.image-about {
 	flex: 1 0 calc(50% - 10px);
-
 	margin-bottom: 20px;
-	border-radius: 10px;
+	border-radius: 30px;
 	display: flex;
 	align-items: flex-end;
 }
 
-.image img {
+.image-about img {
 	width: 100%;
 	height: auto;
 	display: block;
