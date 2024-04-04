@@ -8,9 +8,7 @@
 */
 
 
-#about-us {
-	/* Styles specific to the about us section */
-}
+#about-us {}
 
 #about-us .inner {
 	/* Styles specific to the inner div of the about us section */
@@ -51,6 +49,7 @@ p {
 	/* Styles specific to the image div within the about us section */
 	width: 100%;
 	max-width: 500px;
+	text-align: center;
 	/* Adjust the maximum width of the image container */
 }
 
@@ -64,6 +63,9 @@ p {
 }
 
 @media (max-width: 768px) {
+	#about-us {
+		text-align: center;
+	}
 
 	/* Media query for small screens */
 	.right-column {
@@ -75,6 +77,8 @@ p {
 		padding-right: 0;
 		/* Remove padding between columns on small screens */
 	}
+
+
 
 
 }
@@ -4299,15 +4303,21 @@ body.is-mobile.landing #page-wrapper {
 
 #video-bg {
 	position: absolute;
-    top: 50%; /* Center the video vertically */
-    left: 50%; /* Center the video horizontally */
-    transform: translate(-50%, -50%); /* Move the video back by half of its own width and height */
-    min-width: 100%;
-    min-height: 100%;
-    width: auto; /* Allow the video to resize horizontally */
-    height: auto; /* Allow the video to resize vertically */
-    z-index: -1;
-    object-fit: cover; /* Ensure the video covers the entire container */
+	top: 50%;
+	/* Center the video vertically */
+	left: 50%;
+	/* Center the video horizontally */
+	transform: translate(-50%, -50%);
+	/* Move the video back by half of its own width and height */
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	/* Allow the video to resize horizontally */
+	height: auto;
+	/* Allow the video to resize vertically */
+	z-index: -1;
+	object-fit: cover;
+	/* Ensure the video covers the entire container */
 }
 
 .inner {
