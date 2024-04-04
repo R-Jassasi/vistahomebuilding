@@ -51,7 +51,7 @@
 			</video>
 			<div class="inner">
 				<!--<h2><img src="./images/Logo-white.png" class=logo></h2>-->
-				<h2 style="color: white;"> VISTA HOME</h2>
+				<h2 style="color: white;"> VISTA HOME BUILDING</h2>
 				<p style="color: white;">Building With Vision<br />
 					Quality<br />
 					and Pride </p>
@@ -239,40 +239,64 @@
 			<div class="inner">
 				<section>
 					<h2>Get in Touch</h2>
+					<form id="myForm" action="https://api.web3forms.com/submit" method="POST">
 
-					<form method="post" action="#">
+						<!-- Replace with your Access Key -->
+						<input type="hidden" name="access_key" value="5f91212a-83cf-40eb-b751-a4df4c028996">
+
 						<div class="row gtr-uniform">
+
+							<!-- Name -->
 							<div class="col-6 col-12-xsmall">
-								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+								<input type="text" name="name" id="demo-name" value="" placeholder="Name" required />
 							</div>
+
+							<!-- Email -->
 							<div class="col-6 col-12-xsmall">
-								<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+								<input type="email" name="email" id="demo-email" value="" placeholder="Email" required />
 							</div>
+
+							<!-- Category -->
 							<div class="col-12">
-								<select name="demo-category" id="demo-category">
-									<option value="">- Services -</option>
-									<option value="1">Custom Home Interior</option>
-									<option value="1">Legal basements</option>
-									<option value="1">Kitchenettes</option>
-									<option value="1">Bathrooms</option>
-									<option value="1">Flooring</option>
-									<option value="1">Stairs</option>
-									<option value="1">Tiles</option>
+								<select name="category" id="demo-category" required>
+									<option value="None selected">- Services -</option>
+									<option value="Custom Home Interior">Custom Home Interior</option>
+									<option value="Legal basements">Legal basements</option>
+									<option value="Kitchenettes">Kitchenettes</option>
+									<option value="Bathrooms">Bathrooms</option>
+									<option value="Flooring">Flooring</option>
+									<option value="Stairs">Stairs</option>
+									<option value="Tiles">Tiles</option>
+									<option value="Other">Other</option>
 								</select>
 							</div>
+							<!-- Message -->
+							<div class="col-12">
+								<textarea name="message" id="demo-message" placeholder="Enter your message"
+									rows="6" required></textarea>
+							</div>
 
 							<div class="col-12">
-								<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
-									rows="6"></textarea>
-							</div>
-							<div class="col-12">
+								<!-- hCaptcha Spam Protection -->
+						        <div class="h-captcha" data-captcha="true" required></div>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" class="primary" /></li>
 									<li><input type="reset" value="Reset" /></li>
 								</ul>
 							</div>
+							<!-- Required for hCaptcha -->
+							<script src="https://web3forms.com/client/script.js" async defer></script>
 						</div>
 					</form>
+					<script>
+						document.getElementById("myForm").addEventListener("submit", function(event) {
+							var captchaResponse = document.querySelector('[name="h-captcha-response"]').value;
+							if (!captchaResponse) {
+								event.preventDefault(); // Prevent form submission
+								alert("Please complete the captcha.");
+							}
+						});
+					</script>
 				</section>
 
 			</div>
@@ -286,17 +310,17 @@
 
 
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon solid fa-phone"><span class="label">Twitter</span></a></li>
 						<li><a href="https://www.facebook.com/profile.php?id=100080721155648&mibextid=eQY6cl"
 								class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 						<li><a href="https://www.instagram.com/vista_home_building?igsh=NTc4MTIwNjQ2YQ%3D%3D&fbclid=IwAR3UGvcMCUfawPxo_ms9tlBjXKVrCfMVdUuBHCaZOZwqC-fXvkNTfkfsbZA_aem_AUtg0WNgwTdx4E9087lDjLFhEknVV1KoCNa89uUBmhNoRx6PMPHRjBaYan0v41yOz0vEZ-m_SvKpMzs5USrU5esV"
 								class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands fa-whatsapp"><span class="label">Dribbble</span></a></li>
 						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled</li>
-						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Vista Home Building 2024</li> 
+						<li style="color: #ffffff2a;">Template: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
 					</ul>
 		</footer>
 
